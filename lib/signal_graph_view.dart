@@ -1,6 +1,5 @@
 // signal_graph_view.dart
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'common_defines.dart';
 
 class SignalGraphView extends StatefulWidget {

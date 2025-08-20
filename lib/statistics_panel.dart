@@ -23,7 +23,7 @@ class StatisticsPanel extends StatelessWidget {
     );
 
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.grey.shade50,
         border: Border.all(color: Colors.grey.shade300),
@@ -40,15 +40,15 @@ class StatisticsPanel extends StatelessWidget {
               color: Colors.blue.shade800,
             ),
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           _buildStatRow('Signal Mean', '${stats['signalMean'].toStringAsFixed(2)}'),
           _buildStatRow('Signal Std Dev', '${stats['signalStdDev'].toStringAsFixed(2)}'),
           _buildStatRow('Signal Range', '${stats['signalMin'].toStringAsFixed(1)} - ${stats['signalMax'].toStringAsFixed(1)}'),
-          Divider(height: 20),
+          const Divider(height: 20),
           _buildStatRow('Detections', '${stats['detectionCount']}'),
           _buildStatRow('Detection Time', '${stats['detectionDuration'].toStringAsFixed(2)}s'),
           _buildStatRow('Algorithm Accuracy', '${(stats['algorithmAccuracy'] * 100).toStringAsFixed(1)}%'),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           _buildAccuracyIndicator(stats['algorithmAccuracy']),
         ],
       ),
@@ -120,7 +120,7 @@ class StatisticsPanel extends StatelessWidget {
             color: indicatorColor,
           ),
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         LinearProgressIndicator(
           value: accuracy,
           backgroundColor: Colors.grey.shade300,
